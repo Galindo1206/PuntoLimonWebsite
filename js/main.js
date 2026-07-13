@@ -45,11 +45,6 @@ function showToast(message) {
   window.setTimeout(() => toast.classList.remove("is-visible"), 3800);
 }
 
-document.querySelectorAll("a.is-disabled, #menu-pdf").forEach((link) => link.addEventListener("click", (event) => {
-  event.preventDefault();
-  showToast(link.id === "menu-pdf" ? "Carta PDF de demostración: agrega el archivo real y actualiza este enlace." : "La aplicación estará disponible próximamente.");
-}));
-
 const form = document.querySelector("#contact-form");
 const status = document.querySelector("#form-status");
 function fieldMessage(input) {
@@ -78,9 +73,9 @@ ${data.get("message")}
 Correo: ${data.get("email")}
 Teléfono: ${data.get("phone") || "No indicado"}`;
   const text = encodeURIComponent(rawMessage);
-  status.textContent = "Formulario demostrativo: tu mensaje está listo para WhatsApp.";
+  status.textContent = "Tu mensaje está listo para WhatsApp.";
   showToast("Mensaje preparado. Se abrirá WhatsApp en una nueva pestaña.");
-  window.setTimeout(() => window.open(`https://wa.me/51999999999?text=${text}`, "_blank", "noopener"), 450);
+  window.open(`https://wa.me/51999999999?text=${text}`, "_blank", "noopener");
 });
 
 form.querySelectorAll("input, textarea").forEach((input) => input.addEventListener("input", () => {

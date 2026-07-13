@@ -1,4 +1,4 @@
-/* Carta de demostración: reemplaza nombres, precios, descripciones e imágenes aquí. */
+/* Datos de la carta. */
 const dishes = [
   { id: 1, name: "Ceviche clásico", category: "ceviches", description: "Pescado fresco, limón, cebolla roja, ají y acompañamientos tradicionales.", price: "S/ 28.00", image: "assets/images/hero/ceviche-hero.png", position: "72% center", badge: "Más pedido" },
   { id: 2, name: "Ceviche mixto", category: "ceviches", description: "Pescado y mariscos bañados en leche de tigre de la casa.", price: "S/ 34.00", image: "assets/images/hero/ceviche-hero.png", position: "80% center", badge: "Recomendado" },
@@ -29,7 +29,7 @@ function renderMenu(filter = "all") {
       </div>
       <div class="menu-item__copy">
         ${dish.badge ? `<span class="menu-item__badge">${dish.badge}</span>` : ""}
-        <div class="menu-item__meta"><h3>${dish.name}</h3><strong>${dish.price}*</strong></div>
+        <div class="menu-item__meta"><h3>${dish.name}</h3><strong>${dish.price}</strong></div>
         <p>${dish.description}</p>
       </div>
     </article>`).join("");
@@ -45,4 +45,3 @@ filterButtons.forEach((button) => {
 });
 
 renderMenu();
-

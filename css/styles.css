@@ -128,7 +128,6 @@ h2 em, .hero h1 em, .app-promo h2 em { color: var(--lime); font-style: normal; }
 .dish-card__body > div { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding-top: 15px; border-top: 1px solid var(--line); }
 .dish-card__body strong { color: var(--green-dark); }
 .dish-card__body a { color: var(--green-deep); font-size: .71rem; font-weight: 800; }
-.demo-note { margin: 18px 0 0; color: var(--muted); font-size: .74rem; text-align: center; }
 
 /* Dynamic menu */
 .menu-section { background: var(--white); }
@@ -146,8 +145,6 @@ h2 em, .hero h1 em, .app-promo h2 em { color: var(--lime); font-style: normal; }
 .menu-item strong { color: var(--green-deep); font-size: .78rem; white-space: nowrap; }
 .menu-item p { display: -webkit-box; overflow: hidden; margin: 9px 0 0; color: var(--muted); font-size: .72rem; line-height: 1.45; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
 .menu-item__badge { display: inline-block; margin-bottom: 5px; color: var(--turquoise); font-size: .58rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
-.section-action { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 42px; }
-.section-action span { color: var(--muted); font-size: .7rem; }
 
 /* App */
 .app-promo { position: relative; overflow: hidden; padding: 110px 0 80px; color: var(--white); background: linear-gradient(130deg, #002e28, #00594a); }
@@ -163,7 +160,6 @@ h2 em, .hero h1 em, .app-promo h2 em { color: var(--lime); font-style: normal; }
 .store-button > span { font-size: 1.5rem; }
 .store-button small { display: grid; color: #aabbb5; font-size: .54rem; line-height: 1.4; }
 .store-button strong { color: var(--white); font-size: .95rem; }
-.is-disabled { cursor: default; opacity: .78; }
 .phone-stage { position: relative; display: grid; min-height: 590px; place-items: center; }
 .phone { position: relative; z-index: 2; width: 292px; height: 580px; padding: 10px; background: #071713; border: 2px solid #334c45; border-radius: 42px; box-shadow: 0 35px 80px rgba(0,0,0,.4); transform: rotate(4deg); }
 .phone__speaker { position: absolute; z-index: 3; top: 18px; left: 50%; width: 80px; height: 20px; background: #071713; border-radius: 0 0 14px 14px; transform: translateX(-50%); }
@@ -173,7 +169,7 @@ h2 em, .hero h1 em, .app-promo h2 em { color: var(--lime); font-style: normal; }
 .phone__panel { padding: 26px 22px; color: var(--text); }
 .phone__panel span { color: var(--turquoise); font-size: .65rem; font-weight: 800; text-transform: uppercase; }
 .phone__panel h3 { margin: 6px 0 18px; font-family: var(--font-title); font-size: 2rem; line-height: 1.05; text-transform: uppercase; }
-.phone__panel button { padding: 10px 16px; color: var(--green-dark); background: var(--lime); border: 0; border-radius: 999px; font-size: .72rem; font-weight: 800; }
+.phone__panel .phone__cta { display: inline-block; padding: 10px 16px; color: var(--green-dark); background: var(--lime); border-radius: 999px; font-size: .72rem; font-weight: 800; }
 .app-float { position: absolute; z-index: 3; right: -5px; bottom: 88px; display: flex; align-items: center; gap: 10px; padding: 13px 17px; color: var(--text); background: var(--white); border-radius: 14px; box-shadow: var(--shadow); }
 .app-float > span { display: grid; width: 36px; height: 36px; place-items: center; color: var(--green-dark); background: var(--lime); border-radius: 50%; }
 .app-float div { display: grid; }
