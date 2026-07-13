@@ -1,0 +1,108 @@
+@media (max-width: 1120px) {
+  .main-nav { gap: 13px; }
+  .main-nav > a { font-size: .7rem; }
+  .nav-cta { display: none; }
+  .about__grid { gap: 55px; }
+  .menu-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 1023px) {
+  .section { padding: 88px 0; }
+  .site-header, .site-header.is-scrolled { height: 74px; }
+  .brand, .is-scrolled .brand { width: 58px; height: 58px; }
+  .brand img, .is-scrolled .brand img { width: 54px; height: 54px; }
+  .menu-toggle { position: relative; z-index: 1002; display: grid; width: 46px; height: 46px; padding: 11px; align-content: center; gap: 5px; border-radius: 50%; background: rgba(0,44,38,.75); cursor: pointer; }
+  .is-scrolled .menu-toggle { background: var(--green-dark); }
+  .menu-toggle span { display: block; width: 100%; height: 2px; background: var(--white); transition: .3s; }
+  .menu-open .menu-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-open .menu-toggle span:nth-child(2) { opacity: 0; }
+  .menu-open .menu-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .main-nav { position: fixed; z-index: 1001; inset: 0; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 4px; padding: 90px max(30px, 8vw) 40px; color: var(--white); background: var(--green-dark); visibility: hidden; opacity: 0; transform: translateX(100%); transition: visibility .35s, opacity .35s, transform .35s; }
+  .main-nav::after { position: absolute; right: -80px; bottom: -80px; width: 300px; height: 300px; content: ""; border: 50px solid rgba(117,201,0,.1); border-radius: 50%; }
+  .main-nav.is-open { visibility: visible; opacity: 1; transform: none; }
+  .main-nav > a:not(.button) { font-family: var(--font-title); font-size: clamp(1.4rem, 6vw, 2.2rem); font-weight: 600; line-height: 1.2; text-transform: uppercase; }
+  .main-nav .nav-cta { display: inline-flex; margin-top: 18px; font-family: var(--font-body); font-size: .8rem; }
+  .about__grid { grid-template-columns: .9fr 1.1fr; gap: 45px; }
+  .image-frame img { height: 520px; }
+  .about__stamp { right: -15px; width: 116px; height: 116px; }
+  .specialty-grid { grid-template-columns: repeat(2, 1fr); }
+  .app-promo__grid { grid-template-columns: 1fr 380px; gap: 30px; }
+  .phone { width: 260px; height: 530px; }
+  .visit__grid { grid-template-columns: 1fr 1fr; }
+  .visit-card { padding: 35px; }
+  .contact-section__grid { gap: 45px; }
+  .footer__grid { grid-template-columns: 1.2fr 1fr 1fr; }
+  .footer__grid > div:last-child { grid-column: 2 / -1; }
+}
+
+@media (max-width: 767px) {
+  .container { width: min(calc(100% - 30px), var(--container)); }
+  .section { padding: 72px 0; }
+  .section h2, .app-promo h2 { font-size: clamp(2.35rem, 11vw, 3.5rem); }
+  .section-heading { margin-bottom: 34px; }
+  .section-heading--split { display: block; }
+  .section-heading--split > p { width: auto; margin-top: 18px; }
+  .hero { min-height: 690px; }
+  .hero__image { object-position: 63% center; }
+  .hero__overlay { background: linear-gradient(90deg, rgba(0,38,32,.97) 0%, rgba(0,43,36,.79) 70%, rgba(0,30,25,.42) 100%); }
+  .hero__content { padding-top: 50px; }
+  .hero h1 { max-width: 570px; font-size: clamp(3rem, 13vw, 4.8rem); }
+  .hero__lead { max-width: 440px; margin: 20px 0 25px; }
+  .hero__trust { gap: 10px 16px; margin-top: 28px; }
+  .hero__wave { height: 40px; }
+  .hero__orb { display: none; }
+  .about__grid { display: flex; flex-direction: column-reverse; gap: 42px; }
+  .about__visual, .about__copy { width: 100%; }
+  .image-frame img { height: 460px; }
+  .about__stamp { right: 12px; bottom: 30px; }
+  .specialty-grid, .menu-grid { grid-template-columns: 1fr; }
+  .dish-card__image { height: 260px; }
+  .dish-card__body p { min-height: auto; }
+  .menu-filters { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; margin-inline: -15px; padding: 2px 15px 12px; scrollbar-width: thin; }
+  .filter-button { flex: 0 0 auto; }
+  .app-promo { padding: 80px 0 40px; }
+  .app-promo__grid { grid-template-columns: 1fr; }
+  .check-list { grid-template-columns: 1fr; }
+  .phone-stage { min-height: 590px; }
+  .gallery-grid { grid-auto-rows: 210px; grid-template-columns: 1fr 1fr; }
+  .gallery-item--tall { grid-row: span 2; }
+  .gallery-item--wide { grid-column: span 2; }
+  .gallery-item span { opacity: 1; transform: none; }
+  .visit__grid { grid-template-columns: 1fr; }
+  .map-wrap { min-height: 380px; }
+  .contact-section__grid { grid-template-columns: 1fr; }
+  .contact-form { padding: 25px; }
+  .footer__grid { grid-template-columns: 1fr 1fr; gap: 40px 25px; }
+  .footer__grid > div:last-child { grid-column: auto; }
+}
+
+@media (max-width: 479px) {
+  .hero { min-height: 660px; }
+  .hero__image { object-position: 69% center; }
+  .hero__overlay { background: linear-gradient(90deg, rgba(0,38,32,.98), rgba(0,43,36,.83)); }
+  .hero h1 { font-size: clamp(2.8rem, 14.5vw, 4rem); }
+  .button-row .button { width: 100%; }
+  .hero__trust span:last-child { display: none; }
+  .image-frame { border-radius: 40% 40% 20px 20px; }
+  .image-frame img { height: 390px; }
+  .dish-card__image { height: 230px; }
+  .menu-item { grid-template-columns: 82px 1fr; padding: 12px; }
+  .menu-item__image { height: 88px; }
+  .store-button { width: 100%; }
+  .phone-stage { min-height: 545px; }
+  .phone { width: 240px; height: 490px; }
+  .app-float { right: -5px; bottom: 55px; }
+  .gallery-grid { display: grid; grid-auto-rows: 230px; grid-template-columns: 1fr; }
+  .gallery-item--tall { grid-row: auto; }
+  .gallery-item--wide { grid-column: auto; }
+  .visit-card { padding: 27px 22px; }
+  .visit-card .button { width: 100%; }
+  .form-grid { grid-template-columns: 1fr; gap: 0; }
+  .form-submit { display: grid; }
+  .form-submit .button { width: 100%; }
+  .footer__grid { grid-template-columns: 1fr; }
+  .footer__grid > div:last-child { grid-column: auto; }
+  .footer__bottom { align-items: flex-start; flex-direction: column; }
+  .footer__bottom div { flex-direction: column; gap: 6px; }
+  .whatsapp-float { width: 50px; height: 50px; }
+}
