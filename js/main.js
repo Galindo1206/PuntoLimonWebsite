@@ -66,7 +66,7 @@ form.addEventListener("submit", (event) => {
   });
   if (!isValid) { status.textContent = "Revisa los campos marcados."; form.querySelector(":invalid")?.focus(); return; }
   const data = new FormData(form);
-  const rawMessage = `Hola Punto Limón. Soy ${data.get("name")}.
+  const rawMessage = `Hola Octomar. Soy ${data.get("name")}.
 
 ${data.get("message")}
 
@@ -75,7 +75,7 @@ Teléfono: ${data.get("phone") || "No indicado"}`;
   const text = encodeURIComponent(rawMessage);
   status.textContent = "Tu mensaje está listo para WhatsApp.";
   showToast("Mensaje preparado. Se abrirá WhatsApp en una nueva pestaña.");
-  window.open(`https://wa.me/51999999999?text=${text}`, "_blank", "noopener");
+  window.open(`https://wa.me/51910471213?text=${text}`, "_blank", "noopener");
 });
 
 form.querySelectorAll("input, textarea").forEach((input) => input.addEventListener("input", () => {

@@ -1,6 +1,6 @@
-# Punto Limón — web informativa
+# Octomar — Sabores Peruanos
 
-Sitio estático, responsive y sin backend para un restaurante peruano de cocina marina. Está construido con HTML5, CSS3 y JavaScript puro; no requiere Node.js, base de datos ni instalación de dependencias.
+Sitio estático, responsive y sin backend para Octomar, restaurante de comida peruana y marina. Está construido con HTML5, CSS3 y JavaScript puro; no requiere Node.js, base de datos ni instalación de dependencias.
 
 ## Abrir localmente
 
@@ -21,7 +21,6 @@ index.html                 Contenido, SEO y estructura semántica
 css/styles.css             Estilos base, componentes y animaciones
 css/responsive.css         Ajustes para tablet y móvil
 js/main.js                 Header, menú móvil, scroll, formulario y avisos
-js/menu.js                 Datos y filtros de la carta
 js/gallery.js              Lightbox accesible
 assets/images/logo/        Logo utilizado en la web
 assets/images/hero/        Fotografía principal generada para el proyecto
@@ -36,46 +35,34 @@ assets/icons/              Carpeta preparada para iconos adicionales
 
 ### Logo e imágenes
 
-- Reemplaza `assets/images/logo/punto-limon.png` conservando el mismo nombre, preferiblemente por un PNG transparente optimizado.
-- Reemplaza las fotos en sus carpetas o cambia sus rutas en `index.html` y `js/menu.js`.
+- El logo oficial está en `assets/images/logo/final-logo.png`. Conserva su proporción y transparencia; no lo recortes ni le apliques filtros.
+- Reemplaza las fotos en sus carpetas o cambia sus rutas en `index.html`.
 - Mantén proporciones similares, optimiza a WebP o AVIF y procura que cada imagen pese menos de 300 KB para producción.
 - Las imágenes gastronómicas e interior incluidas fueron generadas específicamente como recursos demostrativos del sitio.
 
 ### Platos y precios
 
-Edita el arreglo `dishes` en `js/menu.js`. Cada objeto contiene `name`, `category`, `description`, `price`, `image`, `position` y, opcionalmente, `badge`. Las categorías existentes son `ceviches`, `entradas`, `pescados`, `criollos`, `sopas`, `bebidas` y `postres`.
-
-Las seis tarjetas destacadas se editan directamente en la sección `#especialidades` de `index.html`. Todos los precios actuales son ejemplos, marcados con asterisco.
+Las seis tarjetas destacadas se editan directamente en la sección `#especialidades` de `index.html`.
 
 ### Datos comerciales y WhatsApp
 
-Busca y reemplaza estos valores de demostración en `index.html`, `js/main.js` y el bloque JSON-LD:
+Los datos comerciales configurados son:
 
-- `+51 999 999 999` y `51999999999`
-- `Av. Ejemplo 123`
-- `Distrito por definir`
-- `hola@puntolimon.pe`
-- `@puntolimon.pe`
-- Horarios, servicios y métodos de pago
-- URL canónica `https://www.puntolimon.pe/`
+- Marca: Octomar
+- Eslogan: Sabores Peruanos
+- Teléfono y WhatsApp: `+51 910 471 213`
+- Número para enlaces: `51910471213`
+- Dirección: Av. Arequipa N.° 436, Pampas, 09156
 
-En `js/main.js`, cambia el número de `https://wa.me/51999999999` por el número real con código de país, sin espacios ni símbolos.
+No se muestran horarios, correo, redes sociales, métodos de pago ni enlaces de tiendas porque no se proporcionaron datos confirmados.
 
 ### Google Maps
 
-En `index.html`, localiza el `iframe` de la sección `#ubicacion` y reemplaza su atributo `src` por la URL de inserción de Google Maps del local real. Actualiza también el enlace del botón **Cómo llegar**.
+El mapa busca la dirección comercial proporcionada sin inventar coordenadas. Cuando exista un enlace oficial verificado, actualiza el `iframe` y el botón **Cómo llegar** en `index.html`.
 
 ### Aplicación móvil
 
-Reemplaza los `href="#"` de los botones Google Play y App Store por las URL reales y elimina la clase `is-disabled`. Puedes sustituir el mockup actual por capturas dentro de `assets/images/app/`.
-
-### Carta PDF
-
-Guarda el PDF, por ejemplo, como `assets/carta-punto-limon.pdf`. Cambia el `href` del enlace con id `menu-pdf`, elimina ese id si ya no necesitas el aviso y añade `target="_blank"` si deseas abrirlo en otra pestaña.
-
-### Redes, privacidad y términos
-
-Los enlaces con `href="#"` en redes sociales, política de privacidad y términos son marcadores provisionales. Reemplázalos antes de publicar.
+La sección conserva el mockup de la aplicación y dirige las consultas al WhatsApp real. Agrega enlaces de Google Play o App Store únicamente cuando existan URLs oficiales confirmadas.
 
 ## Publicación
 
@@ -93,10 +80,9 @@ Sube el proyecto a un repositorio, abre **Settings → Pages**, selecciona **Dep
 
 ## Lista previa a producción
 
-- Reemplazar todos los datos marcados como provisionales.
-- Confirmar platos, precios, horarios y métodos de pago.
+- Confirmar platos y precios.
+- Agregar horarios, correo y redes solamente cuando existan datos oficiales.
 - Optimizar las imágenes a WebP/AVIF.
-- Configurar WhatsApp, Maps, redes, tiendas de apps y PDF.
+- Reemplazar la búsqueda de Maps por el enlace oficial cuando esté disponible.
 - Añadir páginas reales de privacidad y términos.
-- Actualizar dominio canónico, Open Graph y JSON-LD.
-
+- Agregar dominio canónico y URL absoluta de Open Graph cuando exista un dominio oficial.
